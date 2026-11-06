@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: #f5f5f5;
+  color: #171717;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 520px;
+  margin: auto;
+  background: #fff;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+.header {
+  height: 75px;
+  background: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  border-bottom: 2px solid #c8a64b;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #d7b65b;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: white;
+  letter-spacing: 3px;
+  font-size: 17px;
+}
+
+.menu-button {
+  background: transparent;
+  border: 0;
+  color: #d7b65b;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 25px 20px;
+}
+
+.form-screen {
+  background: white;
+  border-radius: 18px;
+}
+
+.section-icon {
+  width: 65px;
+  height: 65px;
+  background: #171717;
+  color: #d7b65b;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 18px;
+  border: 1px solid #d7b65b;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 10px 0;
+  color: #171717;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.form label {
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 11px;
+  background: #fafafa;
+  font-size: 14px;
+  outline: none;
+  direction: rtl;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: #c8a64b;
+  background: white;
+}
+
+.form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e6c66c, #b18b32);
+  color: #171717;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #c8a64b40;
+}
+
+.continue-button:hover {
+  filter: brightness(1.05);
+}
+
+.back-button {
+  background: #171717;
+  color: #d7b65b;
+  border: 1px solid #c8a64b;
+  padding: 9px 18px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.location-button {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #c8a64b;
+  border-radius: 12px;
+  background: #171717;
+  color: #e3c56c;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.car-summary {
+  padding: 15px;
+  margin: 12px 0;
+  border: 1px solid #e4d5a8;
+  background: #fffdf7;
+  border-radius: 11px;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+.secure-note {
+  margin-top: 25px;
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 520px;
+  height: 75px;
+  background: #111;
+  border-top: 2px solid #c8a64b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.bottom-nav div {
+  color: #d7b65b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.bottom-nav span {
+  color: white;
+  font-size: 11px;
+}
+
+@media (min-width: 600px) {
+  .app {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 35px #00000015;
+  }
+}
+/* ضبط عرض التطبيق على جميع الشاشات */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: clip;
+}
+
+input,
+textarea,
+select,
+button {
+  max-width: 100%;
+  font-family: inherit;
+}
+
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px !important;
+  }
+
+  section {
+    width: 100%;
+    min-width: 0;
+  }
+}
