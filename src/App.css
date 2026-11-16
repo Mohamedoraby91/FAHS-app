@@ -198,8 +198,8 @@ h1 {
   width: 100%;
   max-width: 520px;
   height: 75px;
-  background: #111;
-  border-top: 2px solid #c8a64b;
+  background: #ffffff;
+  border-top: 2px solid #0B2F55;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -207,7 +207,7 @@ h1 {
 }
 
 .bottom-nav div {
-  color: #d7b65b;
+  color: #0B2F55;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,3 +273,138 @@ button {
     min-width: 0;
   }
 }
+
+
+/* =========================================
+   FAHS - Blue & White visual theme
+   Keeps existing layout and component behavior.
+   ========================================= */
+:root {
+  --fahs-blue: #1677B8;
+  --fahs-blue-dark: #0B2F55;
+  --fahs-blue-soft: #EAF4FA;
+  --fahs-white: #FFFFFF;
+  --fahs-text: #183247;
+  --fahs-muted: #687987;
+  --fahs-border: #DCE6ED;
+}
+
+html,
+body {
+  background: var(--fahs-white);
+  color: var(--fahs-text);
+}
+
+.app,
+.form-screen {
+  background: var(--fahs-white);
+  color: var(--fahs-text);
+}
+
+.header {
+  background: var(--fahs-blue);
+  border-bottom: 2px solid var(--fahs-blue-dark);
+}
+
+.logo,
+.menu-button {
+  color: var(--fahs-white);
+}
+
+.logo span {
+  color: var(--fahs-white);
+}
+
+.section-icon {
+  background: var(--fahs-blue);
+  color: var(--fahs-white);
+  border-color: var(--fahs-blue);
+}
+
+h1,
+.form label {
+  color: var(--fahs-blue-dark);
+}
+
+.subtitle,
+.secure-note {
+  color: var(--fahs-muted);
+}
+
+.form input,
+.form select,
+.form textarea {
+  background: #FAFCFE;
+  border-color: var(--fahs-border);
+  color: var(--fahs-text);
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: var(--fahs-blue);
+  box-shadow: 0 0 0 3px rgba(22, 119, 184, 0.12);
+  background: var(--fahs-white);
+}
+
+.continue-button {
+  background: var(--fahs-blue);
+  color: var(--fahs-white);
+  box-shadow: 0 5px 15px rgba(22, 119, 184, 0.20);
+}
+
+.continue-button:hover {
+  background: var(--fahs-blue-dark);
+}
+
+.back-button,
+.location-button {
+  background: var(--fahs-blue);
+  color: var(--fahs-white);
+  border-color: var(--fahs-blue);
+}
+
+.back-button:hover,
+.location-button:hover {
+  background: var(--fahs-blue-dark);
+}
+
+.car-summary {
+  border-color: var(--fahs-border);
+  background: var(--fahs-blue-soft);
+  color: var(--fahs-text);
+}
+
+.bottom-nav {
+  background: var(--fahs-white);
+  border-top: 1px solid var(--fahs-border);
+  box-shadow: 0 -4px 18px rgba(11, 47, 85, 0.06);
+}
+
+.bottom-nav div {
+  color: var(--fahs-blue-dark);
+}
+
+.bottom-nav span {
+  color: var(--fahs-blue-dark);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--fahs-blue);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(22, 119, 184, 0.18);
+  color: var(--fahs-blue-dark);
+}
+
+
+/* FAHS accessibility and SMS-auth states */
+button:disabled { opacity: .62; cursor: not-allowed; }
+.form input::placeholder, input::placeholder, textarea::placeholder { color: #718293; opacity: 1; }
+input, select, textarea { color: #183247; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
